@@ -10,10 +10,10 @@ app.get("/", cors(), async (req, res) => {
         // const { data } = await axios.get("https://www.bcentral.cl/inicio");
 
         // const $ = cheerio.load(data);
-        const [dataBC, dataBitcoin = await.Promise.allSettled([
+        const [dataBC, dataBitcoin] = await Promise.allSettled([
             axios.get("https://www.bcentral.cl/inicio"),
             axios.get("https://coinmarketcap.com/es/currencies/bitcoin/"),
-        ])];
+        ]);
 
         let $ = cheerio.load(dataBC.value.data);
         const selectorDolar =
