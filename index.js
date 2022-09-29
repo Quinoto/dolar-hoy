@@ -35,19 +35,19 @@ app.get("/", cors(), async (req, res) => {
             "#_BcentralIndicadoresViewer_INSTANCE_pLcePZ0Eybi8_myTooltipDelegate > div > div > div.fin-indicators-col1 > div > div > div:nth-child(4) > div > p.basic-text.fs-2.f-opensans-bold.text-center.c-blue-nb-2";
 
         const objetoDolar = {
-            text: "dólar",
+            text: "dolar",
             valor: $(selectorDolar).text().split("/")[0].trim() ?? "sin datos",
             fecha: new Date().toLocaleDateString(),
         };
 
         const objetoUF = {
-            text: "UF",
+            text: "uf",
             valor: $(selectorUF).text() ?? "sin datos",
             fecha: new Date().toLocaleDateString(),
         };
 
         const objetoEuro = {
-            text: "Euro",
+            text: "euro",
             valor: $(selectorEuro).text() ?? "sin datos",
             fecha: new Date().toLocaleDateString(),
         };
@@ -59,7 +59,7 @@ app.get("/", cors(), async (req, res) => {
             "#__next > div > div.main-content > div.sc-4vztjb-0.cLXodu.cmc-body-wrapper > div > div.sc-1prm8qw-0.gCtjhg.container > div.n78udj-0.jskEGI > div > div.sc-1prm8qw-0.cyZVgY.priceSection > div.sc-1prm8qw-0.cyZVgY.priceTitle > div > span";
 
         const objetoBitcoin = {
-            text: "Bitcoin",
+            text: "bitcoin",
             valor: $(selectorBitcoin).text() ?? "sin datos",
             fecha: new Date().toLocaleDateString(),
 
